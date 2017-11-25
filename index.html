@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<!--JavaScript-->
+	<script>
+
+	var slide = 1; showSlide(slide);
+	function plusSlide(n) { showSlide(slide += n); }
+	function currentSlide(n) { showSlide(slide = n); }
+	function showSlide(n) { var i; var slides = document.getElementsByClassName("mySlide"); var dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slide = 1} 
+			if (n < 1) {slide = slides.length} 
+				for (i = 0; i < slides.length; i++) {       
+
+					slides[i].style.display = "none"; 
+				}
+				 for (i = 0; i < dots.length; i++) {      
+
+				 dots[i].className = dots[i].className.replace(" active", ""); 
+				}
+				 slides[slide-1].style.display = "block"; dots[slide-1].className += " active"; }
+			</script>
+
+		
+
+
+	<meta charset="utf-8">
+	<title></title>
+	<body style="background-color: lght-blue;">
+	<textarea name= "text" cols="25" align="left" row="5"></textarea>
+	<div class="slideshow-container">
+	<div class="mySlides">
+		<div class="numbertext">1 / 3</div>    
+		 <img src="oncept 3.jpg" style="width:20%">     
+
+		 <div class="text"> Text</div> </div>
+		 <div class="mySlides">    
+		 <div class="numbertext">2 / 3</div>     
+		 <img src="Concept weapon.jpg" style="width:10% height: 10%">     
+		 <div class="text"> Two</div> </div>
+		 <div class="mySlides">     
+	
+		<div class="numbertext">3 / 3</div>    
+		 <img src="Concept 2.jpg" style="width:100%">    
+		 <div class="text">Three</div> </div>
+		 <div class="mySlides">     
+		 <div class="numbertext">3 / 3</div>     
+		 <img src="img3.jpg" style="width:100%">     
+		 <div class="text">Three</div> </div>
+
+		 <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> </div>
+		 <br>
+
+		 <div style="text-align:center"> 
+		 	<span class="dot" onclick="currentSlide(1)"></span> 
+		 	<span class="dot" onclick="currentSlide(2)"></span> 
+		 	<span class="dot" onclick="currentSlide(3)"></span> </div>
+
+		  <div id="divName1">
+          	<p>Some text goes here...<p>
+          </div>
+		  <div id="divName2">
+          	<p>Some text goes here...<p>
+     	  </div>
+          <div id="divName3">
+         	 <p>Some text goes here...<p>
+     	  </div>
+			<div id="divName4">
+          	<p>Some text goes here...<p>
+     	  </div>
+		 <textarea name="text1" cols="25" align="left" rows="5"> add text here.. </textarea>
+
+
+
+
+
+
+		 	</body>
+	</head>
+</html>
